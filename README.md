@@ -36,7 +36,7 @@ Cookie : 000000002c20f97900002000
 from decode import decode_netscaler_cookie
 
 ip, port = decode_netscaler_cookie("000000002c20f97900002000")
-print(ip, port)  # 47.40.231.104  4160
+print(ip, port)  # 47.40.231.104  5680
 ```
 
 ## Requirements
