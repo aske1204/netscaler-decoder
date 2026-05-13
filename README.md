@@ -30,14 +30,6 @@ Cookie : 000000002c20f97900002000
   Port : 4160
 ```
 
-### As a module
-
-```python
-from decode import decode_netscaler_cookie
-
-ip, port = decode_netscaler_cookie("000000002c20f97900002000")
-print(ip, port)  # 47.40.231.104  5680
-```
 
 ## Requirements
 
@@ -53,7 +45,3 @@ curl -sI https://target.example.com | grep -i 'set-cookie: NSC_'
 
 Then pass the hex value (the part after `=`, before any `;`) to the decoder.
 
-## References
-
-- [Citrix NetScaler Persistence Cookie Format](https://support.citrix.com/article/CTX108539)
-- Original Perl implementation by [Wireshark/various security researchers](https://github.com/hdm/metasploit-framework/blob/master/modules/auxiliary/scanner/http/netscaler_cookie_decode.rb)
