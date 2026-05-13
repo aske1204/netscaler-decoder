@@ -20,11 +20,11 @@ The cookie format is a hex string where:
 ### As a script
 
 ```bash
-python3 decode_netscaler_cookie.py <cookie_value> [cookie_value ...]
+python3 decode.py <cookie_value> [cookie_value ...]
 ```
 
 ```
-$ python3 decode_netscaler_cookie.py 000000002c20f97900002000
+$ python3 decode.py 000000002c20f97900002000
 Cookie : 000000002c20f97900002000
   IP   : 47.40.231.104
   Port : 4160
@@ -33,7 +33,7 @@ Cookie : 000000002c20f97900002000
 ### As a module
 
 ```python
-from decode_netscaler_cookie import decode_netscaler_cookie
+from decode import decode_netscaler_cookie
 
 ip, port = decode_netscaler_cookie("000000002c20f97900002000")
 print(ip, port)  # 47.40.231.104  4160
